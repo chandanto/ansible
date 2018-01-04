@@ -1,0 +1,7 @@
+---
+      - name: Syntax check ............
+        become: true
+        shell: "/usr/sbin/httpd -t"
+        register: syntaxcheck
+        failed_when: "'Syntax OK' not in syntaxcheck.stderr"
+        listen: syntax-check

@@ -1,0 +1,5 @@
+---
+- name: --- Pre-Check --- Gather remote hosts basic information
+  debug:
+    msg: " Remote host OS Information : {{ ansible_distribution_version }} & {{ ansible_os_family }} & {{ ansible_nodename }}"
+
